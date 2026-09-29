@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="latkuis.css">
+ </head> 
+ <body class="bg-custom-body d-flex flex-column min-vh-100">
+
+<header class="navbar navbar-expand bg-white border-bottom px-4 px-md-5" style="border-top: 2px solid #000000;">
+  <div class="container-fluid p-0">
+    <!--Logo shoes.-->
+    <a class="navbar-brand fw-bold fs-5 text-dark" href="#" style="letter-spacing: 1px;">SHOES.</a>
+
+    <!--menu navigasi-->
+      <ul class="navbar-nav flex-row gap-4 mb-0 ms-auto" style="font-size: 13px;">
+        <li class="nav-item">
+          <a class="nav-link text-grey p-0" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-grey p-0" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-grey  p-0" href="#">About</a>
+        </li>
+      </ul>
+    </div>
+   </header>
+
+    <main class="flex-grow-1 d-flex justify-content-center align-items-center p-3">
+        <div class="container parent-container">
+        <div class="card product-card border-0 shadow-sm p-4 d-flex flex-row align-items-center gap-4" id="productCard" style="max-width: 650px; width: 100%;">
+            
+            <!-- Area Gambar -->
+            <div class="product-image-area bg-custom-img rounded d-flex justify-content-center align-items-center overflow-hidden flex-shrink-0" style="width: 240px; height: 250px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpq05nJNRigfuwgnqArJBo4mA33igL-IU8ef-wGeEHfg&s=10" alt="Air Runner Shoes" class="w-100 h-100 object-fit-cover">
+            </div>
+            
+            <!-- Detail Produk -->
+            <div class="product-info d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                    <span class="product-category d-block mb-1">RUNNING SHOES</span>
+                    <h1 class="product-name fs-4 fw-bold text-dark mb-2">Air Runner</h1>
+                    <p class="product-description mb-3">
+                        Sepatu ringan dan nyaman untuk digunakan saat berolahraga maupun aktivitas sehari-hari.
+                    </p>
+                    <div class="product-price fw-bold text-dark mb-3">Rp 899.000</div>
+                </div>
+                
+                <!-- Pilihan Warna -->
+                <div class="color-options-container mb-3">
+                    <span class="color-label small text-dark d-block mb-2">Pilih Warna:</span>
+                    <div class="color-buttons d-flex gap-2">
+
+                        <!-- Menggunakan getElementById & onclick sesuai instruksi -->
+                        <button class="color-btn rounded-circle border border-secondary p-0" id="btnBlack" onclick="changeColor('black')" style="width: 22px; height: 22px; background-color: #020202; box-shadow: 0 0 0 2px #FFF;"></button>
+                        <button class="color-btn rounded-circle border border-secondary p-0" id="btnBlue" onclick="changeColor('blue')" style="width: 22px; height: 22px; background-color: #057eff; box-shadow:0 0 0 2px #FFF;"></button>
+                        <button class="color-btn rounded-circle border border-secondary p-0" id="btnCream" onclick="changeColor('cream')" style="width: 22px; height: 22px; background-color: oklab(90.337% 0.01633 0.08771); box-shadow:0 0 0 2px #FFF;"></button>
+                    </div>
+                </div>
+
+                <!-- Button Add to Cart -->
+                <button class="add-to-cart-btn btn btn-dark fw-bold py-2 text-white" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </di v>
+        </div>
+    </main> 
+
+    <script>
+        function addToCart(){
+            alert("Produk Air Runner berhasil ditambahkan ke keranjang!")
+        }
+    </script>
+    
+    <script>
+        function changeColor(colorType) {
+            // Mengambil elemen product card menggunakan getElementById
+            let card = document.getElementById('productCard');
+
+            // Manipulasi style background card berdasarkan warna yang dipilih
+            if (colorType === 'black') {
+                card.style.backgroundColor = '#DDDDDD';
+            } else if (colorType === 'blue') {
+                card.style.backgroundColor = '#CFE2FF';
+            } else if (colorType === 'cream') {
+                card.style.backgroundColor = '#F5E6CC';
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

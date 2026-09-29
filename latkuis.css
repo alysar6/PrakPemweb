@@ -1,0 +1,58 @@
+/* Pengaturan Font Utama Sesuai Ketentuan Kuis */
+* {
+    font-family: Arial, sans-serif !important;
+}
+
+.navbar-expand {
+    width: 100%;
+    background-color: #979797;
+    border-top: 5px solid #000000 !important; /* Garis hitam di atas navbar sesuai gambar */
+    border-bottom: 1px solid #DDDDDD;       /* Garis pembatas bawah navbar */
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+/* Palet Warna Khusus Sesuai Panduan Soal */
+.bg-custom-body {
+    background-color: #EEEEEE;
+}
+
+.parent-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.product-card {
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.product-category{
+    color: #777 !important;
+    font-size: 8.5px;
+    font-family: sans-serif !important;
+    letter-spacing: 2px;
+}
+
+.product-description{
+    font-size: 11px;
+    color: #666666;
+}
+
+.bg-custom-img {
+    background-color: #DDDDDD;
+}
+
+/* Efek Hover Button Utama */
+.add-to-cart-btn {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #444444 !important; /* Button ketika di-hover sesuai soal */
+    border-color: #444444 !important;
+}
